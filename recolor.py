@@ -164,5 +164,24 @@ def main():
           f.write(content)
       break
 
+def select_action():
+  question = [{
+    'type': 'list',
+    'name': 'action',
+    'message': 'What would you like to do?',
+    'choices': [{
+      'name': 'Change individual colors.',
+      'value': 0
+     }, {
+       'name': 'Rotate the hue of multiple colors.',
+       'value': 1
+     }]
+  }]
+  return prompt(question)['action']
+
 if __name__ == '__main__':
-  main()
+  action = select_action()
+  if action == 0:
+    main()
+  else:
+    print("Not implemented.")
