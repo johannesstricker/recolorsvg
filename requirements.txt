@@ -1,5 +1,1 @@
-unittest
-re
-glob
-os
 PyInquirer
